@@ -28,6 +28,16 @@ function Calc(){
 		numCounter += 1;
 		operator = 'mul';
 	}
+	this.divide = function() {
+		if (ran == true) {
+			numCounter = 1;
+			numList[0].value = this.total;
+		}
+		else {
+			numCounter += 1;
+		}
+		operator = 'div';
+	}
 	//this method executes 
 	this.equal = function () {
 		//adding
@@ -59,6 +69,10 @@ function Calc(){
 					this.total = numList[0].int() * numList[i].int();
 				}
 			}	
+		}
+		//dividing
+		else if (operator == 'div') {
+			this.total = numList[0].int() / numList[1].int();
 		}
 		//displaying answer and resetting
 		document.getElementById('answer').innerHTML = this.total;
