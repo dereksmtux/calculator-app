@@ -1,8 +1,12 @@
+//keeps track of what num object is being appended
 var numCounter = 0;
+//keeps track of what operation will be done when equal method is called
 var operator = '';
+//keeps track of if the equal method has been called once already
+var ran = false;
 //class deffinition for calculator
 function Calc(){
-	this.total =0;
+	this.total = 0;
 	//this method gets the calc ready to add
 	this.add = function (){
 		numCounter += 1;
@@ -10,7 +14,7 @@ function Calc(){
 	}
 	//this method gets the calc ready to subtract
 	this.subtract = function() {
-		if (operator == 'ran') {
+		if (ran == true) {
 			numCounter = 1;
 			numList[0].value = this.total;
 		}
@@ -43,13 +47,18 @@ function Calc(){
 		}
 		//multiply
 		else if (operator == 'mul') {
-			if (operator == 'ran') {
-				numList[0].value = this.total;
+			if (ran == true) {
+				//numList[0].value = this.total;
+				
+				for (var i = 1; i <= numCounter; i++){
+					this.total = this.total * numList[i].int();
+				}
 			}
-			for (var i = 1; i <= numCounter; i++){
-				//this.total = this.total * numList[i].int();
-				this.total = numList[0].int() * numList[i].int();
-			}
+			else {
+				for (var i = 1; i <= numCounter; i++) {
+					this.total = numList[0].int() * numList[i].int();
+				}
+			}	
 		}
 		//displaying answer and resetting
 		document.getElementById('answer').innerHTML = this.total;
@@ -57,8 +66,7 @@ function Calc(){
 		for (x in numList) {
 			numList[x].value = '';
 		}
-		//numList[0].value = String(this.total);
-		operator = 'ran';
+		ran = true;
 	}
 	//reloads the page
 	this.clear = function(){
