@@ -1,6 +1,7 @@
 function Num(value){
+	//gives all Num objects the value property
 	this.value = value;
-	//appends this.value
+	//appends this.value and displays the result on screen
 	this.make = function(x) {
 		this.value += x;
 		document.getElementById('answer').innerHTML = this.value;
