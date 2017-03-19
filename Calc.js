@@ -38,7 +38,11 @@ function Calc(){
 		}
 		operator = 'div';
 	}
+<<<<<<< HEAD
 	//this method executes
+=======
+	//this method executes 
+>>>>>>> 894b32c24a29de46cf0a6bb3ee7e6de713b1ea30
 	this.equal = function () {
 		//adding
 		if (operator == 'add') {
@@ -59,6 +63,7 @@ function Calc(){
 		else if (operator == 'mul') {
 			if (ran == true) {
 				//numList[0].value = this.total;
+<<<<<<< HEAD
 
 				for (var i = 1; i <= numCounter; i++){
 					this.total = this.total * numList[i].int();
@@ -68,7 +73,22 @@ function Calc(){
 				for (var i = 1; i <= numCounter; i++) {
 					this.total = numList[0].int() * numList[i].int();
 				}
+=======
+				
+				for (var i = 1; i <= numCounter; i++){
+					this.total = this.total * numList[i].int();
+				}
+>>>>>>> 894b32c24a29de46cf0a6bb3ee7e6de713b1ea30
 			}
+			else {
+				for (var i = 1; i <= numCounter; i++) {
+					this.total = numList[0].int() * numList[i].int();
+				}
+			}	
+		}
+		//dividing
+		else if (operator == 'div') {
+			this.total = numList[0].int() / numList[1].int();
 		}
 		//dividing
 		else if (operator == 'div') {
