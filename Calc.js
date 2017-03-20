@@ -40,7 +40,14 @@ function Calc(){
 	}
 	//this method will perform a square root calculation
 	this.squareRoot = function() {
-
+		if (ran == true) {
+			numCounter = 1;
+			numList[0].value = this.total;
+		}
+		else {
+			numCounter +=1;
+		}
+		operator = 'sqr'
 	}
 	//this method executes
 	this.equal = function () {
@@ -77,6 +84,10 @@ function Calc(){
 		//dividing
 		else if (operator == 'div') {
 			this.total = numList[0].int() / numList[1].int();
+		}
+		//square root
+		else if (operator == 'sqr') {
+			
 		}
 		//displaying answer and resetting
 		document.getElementById('answer').innerHTML = this.total;
