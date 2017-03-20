@@ -38,7 +38,11 @@ function Calc(){
 		}
 		operator = 'div';
 	}
-	//this method executes 
+	//this method will perform a square root calculation
+	this.squareRoot = function() {
+
+	}
+	//this method executes
 	this.equal = function () {
 		//adding
 		if (operator == 'add') {
@@ -59,7 +63,7 @@ function Calc(){
 		else if (operator == 'mul') {
 			if (ran == true) {
 				//numList[0].value = this.total;
-				
+
 				for (var i = 1; i <= numCounter; i++){
 					this.total = this.total * numList[i].int();
 				}
@@ -68,7 +72,7 @@ function Calc(){
 				for (var i = 1; i <= numCounter; i++) {
 					this.total = numList[0].int() * numList[i].int();
 				}
-			}	
+			}
 		}
 		//dividing
 		else if (operator == 'div') {
@@ -92,6 +96,3 @@ function Calc(){
 
 //new calc
 var calculator = new Calc();
-
-
-
