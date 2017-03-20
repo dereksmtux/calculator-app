@@ -11,7 +11,7 @@ button {
 	font-size: 24px;
 }
 #answer {
-	width: 25%;
+	width: 30%;
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 24px;
@@ -20,6 +20,9 @@ button {
 	border-radius: 5px;
 }
 table {
+	width: 192px;
+	margin-left: auto;
+	margin-right: auto;
 	border: solid black 1px;
 	border-radius: 5px;
 	padding: 5px;
