@@ -87,7 +87,7 @@ function Calc(){
 		}
 		//square root
 		else if (operator == 'sqr') {
-			
+			this.total = Math.sqrt(NumList[0].int()) 
 		}
 		//displaying answer and resetting
 		document.getElementById('answer').innerHTML = this.total;
