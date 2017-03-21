@@ -28,6 +28,7 @@ function Calc(){
 		numCounter += 1;
 		operator = 'mul';
 	}
+	//this method gets the calc ready to divide
 	this.divide = function() {
 		if (ran == true) {
 			numCounter = 1;
@@ -38,7 +39,7 @@ function Calc(){
 		}
 		operator = 'div';
 	}
-	//this method will perform a square root calculation
+	//this method will get the calce ready to perform a square root calculation
 	this.squareRoot = function() {
 		if (ran == true) {
 			numCounter = 1;
@@ -87,7 +88,7 @@ function Calc(){
 		}
 		//square root
 		else if (operator == 'sqr') {
-			this.total = Math.sqrt(numList[0].int()) 
+			this.total = Math.sqrt(numList[0].int())
 		}
 		//displaying answer and resetting
 		document.getElementById('answer').innerHTML = this.total;
